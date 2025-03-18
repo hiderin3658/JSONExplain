@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Exercise2Answer() {
   return (
     <div className="exercise-page">
       <h1 className="exercise-title">課題2: 外部JSONファイルの読み込み</h1>
       <div className="mb-8">
-        <a href="/" className="back-link">← トップページに戻る</a>
+        <Link href="/" className="back-link">← トップページに戻る</Link>
       </div>
 
       <div className="exercise-section">
@@ -198,10 +200,10 @@ function displayEmployees(employees) {
           <li>JSONファイルを読み込むには、ローカルサーバーを使用する必要があります。ファイルプロトコル（file://）ではCORSポリシーによりfetchが失敗します。</li>
           <li>簡易的なローカルサーバーを起動するには、以下のコマンドが使えます：
             <pre className="bg-gray-100 p-2 rounded-md mt-2 mb-2 overflow-auto">
-              <code>// Python 3の場合
+              <code>{/* Python 3の場合 */}
 python -m http.server
 
-// Node.jsの場合（npx serveをインストール済みの場合）
+{/* Node.jsの場合（npx serveをインストール済みの場合） */}
 npx serve</code>
             </pre>
           </li>
@@ -212,7 +214,7 @@ npx serve</code>
       </div>
 
       <div className="mt-8">
-        <a href="/" className="back-link">← トップページに戻る</a>
+        <Link href="/" className="back-link">← トップページに戻る</Link>
       </div>
     </div>
   );

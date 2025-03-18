@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Exercise3Answer() {
   return (
     <div className="exercise-page">
       <h1 className="exercise-title">課題3: 公開APIからデータを取得</h1>
       <div className="mb-8">
-        <a href="/" className="back-link">← トップページに戻る</a>
+        <Link href="/" className="back-link">← トップページに戻る</Link>
       </div>
 
       <div className="exercise-section">
@@ -217,7 +219,7 @@ function showError(message) {
       </div>
 
       <div className="mt-8">
-        <a href="/" className="back-link">← トップページに戻る</a>
+        <Link href="/" className="back-link">← トップページに戻る</Link>
       </div>
     </div>
   );

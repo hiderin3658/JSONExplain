@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Exercise1Answer() {
   return (
     <div className="exercise-page">
       <h1 className="exercise-title">課題1: 簡単なJSONオブジェクトの作成と表示</h1>
       <div className="mb-8">
-        <a href="/" className="back-link">← トップページに戻る</a>
+        <Link href="/" className="back-link">← トップページに戻る</Link>
       </div>
 
       <div className="exercise-section">
@@ -138,7 +140,7 @@ displayProfile(myProfile);`}</code>
       </div>
 
       <div className="mt-8">
-        <a href="/" className="back-link">← トップページに戻る</a>
+        <Link href="/" className="back-link">← トップページに戻る</Link>
       </div>
     </div>
   );

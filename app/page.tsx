@@ -63,7 +63,7 @@ export default function Home() {
               <strong className="text-indigo-700">名前/値のペア</strong>（オブジェクト）
               <ul className="list-disc list-inside ml-8 mt-2 space-y-1">
                 <li>波括弧 <code className="bg-gray-100 px-2 py-1 rounded text-pink-600">&#123;&#125;</code> で囲まれた部分</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded text-pink-600">"名前": 値</code> の形式で記述</li>
+                <li><code className="bg-gray-100 px-2 py-1 rounded text-pink-600">&quot;名前&quot;: 値</code> の形式で記述</li>
                 <li>複数のペアはカンマ <code className="bg-gray-100 px-2 py-1 rounded text-pink-600">,</code> で区切る</li>
               </ul>
             </li>
@@ -96,7 +96,7 @@ export default function Home() {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 ml-4">
             <li className="flex items-center bg-blue-50 p-3 rounded-lg">
               <span className="text-blue-500 mr-2">•</span>
-              <span>文字列（ダブルクォーテーション <code className="bg-gray-100 px-2 py-1 rounded text-pink-600">"</code> で囲む）</span>
+              <span>文字列（ダブルクォーテーション <code className="bg-gray-100 px-2 py-1 rounded text-pink-600">&quot;</code> で囲む）</span>
             </li>
             <li className="flex items-center bg-blue-50 p-3 rounded-lg">
               <span className="text-blue-500 mr-2">•</span>
@@ -164,9 +164,9 @@ console.log(person.趣味[0]); // "読書"`}</code>
               <h3 className="text-xl font-medium mb-3 text-indigo-600">JavaScriptオブジェクト → JSON文字列（シリアライズ）</h3>
               <pre className="bg-gray-800 text-gray-100 p-4 rounded-md overflow-auto">
                 <code>{`const person = {
-  名前: "山田太郎",
-  年齢: 30,
-  趣味: ["読書", "映画鑑賞"]
+  "名前": "山田太郎",
+  "年齢": 30,
+  "趣味": ["読書", "映画鑑賞"]
 };
 
 // JavaScriptオブジェクトをJSON文字列に変換
