@@ -108,6 +108,27 @@ body {
   background-color: var(--code-bg);
   color: #e2e8f0;
   border-left: 3px solid var(--accent-color);
+  line-height: 1.8; /* 行間を広げる */
+}
+
+pre, code {
+  line-height: 1.8;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+.json-key, .json-string, .json-number, .json-boolean,
+.html-tag, .html-attr, .html-string,
+.js-keyword, .js-string, .js-comment {
+  line-height: 1.8;
+}
+
+.hljs {
+  line-height: 1.8 !important;
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+  line-height: 1.8 !important;
 }
 
 /* 追加のスタイル - Tailwindの代替 */
