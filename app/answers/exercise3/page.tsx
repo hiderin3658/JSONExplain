@@ -4,9 +4,6 @@ export default function Exercise3Answer() {
   return (
     <div className="exercise-page">
       <h1 className="exercise-title">課題3: 公開APIからデータを取得</h1>
-      <div className="mb-8">
-        <Link href="/" className="back-link">← トップページに戻る</Link>
-      </div>
 
       <div className="exercise-section">
         <h2>課題内容</h2>
@@ -189,10 +186,6 @@ function showError(message) {
           <li>
             <strong>エラーハンドリング</strong>
             <p className="ml-6 mt-2">APIリクエストが失敗した場合のエラーハンドリングを実装し、ユーザーにわかりやすいエラーメッセージを表示しています。</p>
-          </li>
-          <li>
-            <strong>レスポンシブデザイン</strong>
-            <p className="ml-6 mt-2">CSSクラスを使用して、リポジトリカードを画面サイズに応じて自動的にレイアウトするレスポンシブデザインを実装しています。</p>
           </li>
           <li>
             <strong>ローディング表示</strong>

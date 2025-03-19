@@ -4,9 +4,6 @@ export default function Exercise2Answer() {
   return (
     <div className="exercise-page">
       <h1 className="exercise-title">課題2: 外部JSONファイルの読み込み</h1>
-      <div className="mb-8">
-        <Link href="/" className="back-link">← トップページに戻る</Link>
-      </div>
 
       <div className="exercise-section">
         <h2>課題内容</h2>

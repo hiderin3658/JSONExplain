@@ -4,9 +4,6 @@ export default function Exercise1Answer() {
   return (
     <div className="exercise-page">
       <h1 className="exercise-title">課題1: 簡単なJSONオブジェクトの作成と表示</h1>
-      <div className="mb-8">
-        <Link href="/" className="back-link">← トップページに戻る</Link>
-      </div>
 
       <div className="exercise-section">
         <h2>課題内容</h2>
@@ -121,10 +118,6 @@ displayProfile(myProfile);`}</code>
           <li>
             <strong>HTMLへの表示</strong>
             <p className="ml-6 mt-2">JavaScriptを使用して、JSONオブジェクトの各プロパティを取得し、HTMLに表示しています。オブジェクトのネストされたプロパティ（住所やSNS）や配列（趣味）にもアクセスして表示しています。</p>
-          </li>
-          <li>
-            <strong>スタイリング</strong>
-            <p className="ml-6 mt-2">CSSクラスを使用して、表示されるJSONデータを見やすく整理しています。趣味のリストは横並びに表示されます。</p>
           </li>
         </ol>
       </div>

@@ -6,7 +6,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <header className="text-center mb-12 py-6">
           <h1 className="main-title text-indigo-700">
-            JSON入門！
+            JSON入門
           </h1>
         </header>
         
@@ -16,14 +16,13 @@ export default function Home() {
             <li className="mb-2"><a href="#section1" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">JSONとは何か</a></li>
             <li className="mb-2"><a href="#section2" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">JSONの基本構造</a></li>
             <li className="mb-2"><a href="#section3" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">JSONの書き方</a></li>
-            <li className="mb-2"><a href="#section4" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">HTMLとJavaScriptでJSONを扱う方法</a></li>
-            <li className="mb-2"><a href="#section5" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">JSON文字列とJavaScriptオブジェクトの変換</a></li>
-            <li className="mb-2"><a href="#section6" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">実践例：JSONデータの表示</a></li>
-            <li className="mb-2"><a href="#section7" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">実践例：APIからJSONデータを取得する</a></li>
-            <li className="mb-2"><a href="#section8" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">実習課題</a></li>
-            <li className="mb-2"><a href="#section9" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">よくあるエラーと解決方法</a></li>
-            <li className="mb-2"><a href="#section10" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">応用編：jQueryでJSONを扱う</a></li>
-            <li className="mb-2"><a href="#section11" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">参考リソース</a></li>
+            <li className="mb-2"><a href="#section4" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">JSON文字列とJavaScriptオブジェクトの変換</a></li>
+            <li className="mb-2"><a href="#section5" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">実践例：JSONデータの表示</a></li>
+            <li className="mb-2"><a href="#section6" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">実践例：APIからJSONデータを取得する</a></li>
+            <li className="mb-2"><a href="#section7" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">実習課題</a></li>
+            <li className="mb-2"><a href="#section8" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">よくあるエラーと解決方法</a></li>
+            <li className="mb-2"><a href="#section9" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">応用編：jQueryでJSONを扱う</a></li>
+            <li className="mb-2"><a href="#section10" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">参考リソース</a></li>
           </ol>
         </div>
 
@@ -122,29 +121,7 @@ export default function Home() {
         </section>
 
         <section id="section4" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">4. HTMLとJavaScriptでJSONを扱う方法</h2>
-          <h3 className="text-xl font-medium mb-3 text-indigo-600">基本的なHTMLファイルの構造</h3>
-          <pre className="bg-gray-800 text-gray-100 p-4 rounded-md mb-6 overflow-auto">
-            <code>{`<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>JSON入門</title>
-</head>
-<body>
-  <h1>JSONを扱う例</h1>
-  <div id="output"></div>
-  
-  <script>
-    // ここにJavaScriptコードを書きます
-  </script>
-</body>
-</html>`}</code>
-          </pre>
-        </section>
-
-        <section id="section5" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">5. JSON文字列とJavaScriptオブジェクトの変換</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">4. JSON文字列とJavaScriptオブジェクトの変換</h2>
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-medium mb-3 text-indigo-600">JSON文字列 → JavaScriptオブジェクト（パース）</h3>
@@ -178,8 +155,8 @@ console.log(jsonString);
           </div>
         </section>
 
-        <section id="section6" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">6. 実践例：JSONデータの表示</h2>
+        <section id="section5" className="mb-12 bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">5. 実践例：JSONデータの表示</h2>
           <pre className="bg-gray-800 text-gray-100 p-4 rounded-md mb-6 overflow-auto">
             <code>{`<!DOCTYPE html>
 <html>
@@ -227,8 +204,8 @@ console.log(jsonString);
           </pre>
         </section>
 
-        <section id="section7" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">7. 実践例：APIからJSONデータを取得する</h2>
+        <section id="section6" className="mb-12 bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">6. 実践例：APIからJSONデータを取得する</h2>
           <pre className="bg-gray-800 text-gray-100 p-4 rounded-md mb-6 overflow-auto">
             <code>{`// Fetch APIを使ってデータを取得
 fetch('https://api.example.com/data')
@@ -253,8 +230,8 @@ function displayData(data) {
           </pre>
         </section>
 
-        <section id="section8" className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 text-indigo-700 border-b pb-2">8. 実習課題</h2>
+        <section id="section7" className="mb-12">
+          <h2 className="text-2xl font-semibold mb-6 text-indigo-700 border-b pb-2">7. 実習課題</h2>
           
           <div className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-md hover:shadow-lg transition-all">
             <h3 className="text-xl font-medium mb-3 text-indigo-700">課題1: 簡単なJSONオブジェクトの作成と表示</h3>
@@ -281,8 +258,8 @@ function displayData(data) {
           </div>
         </section>
 
-        <section id="section9" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">9. よくあるエラーと解決方法</h2>
+        <section id="section8" className="mb-12 bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">8. よくあるエラーと解決方法</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-xl font-medium mb-3 text-indigo-600">JSONの構文エラー</h3>
@@ -303,8 +280,8 @@ function displayData(data) {
           </div>
         </section>
 
-        <section id="section10" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">10. 応用編：jQueryでJSONを扱う</h2>
+        <section id="section9" className="mb-12 bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">9. 応用編：jQueryでJSONを扱う</h2>
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-medium mb-3 text-indigo-600">例1: jQueryでJSONファイルを読み込んで表示する</h3>
@@ -374,21 +351,15 @@ $(document).ready(function() {
           </div>
         </section>
 
-        <section id="section11" className="mb-12 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">11. 参考リソース</h2>
+        <section id="section10" className="mb-12 bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">10. 参考リソース</h2>
           <ol className="list-decimal list-inside ml-4 space-y-3">
             <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/JSON" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">MDN Web Docs「JSON の操作」</a></li>
             <li><a href="https://ja.javascript.info/" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">現代の JavaScript チュートリアル</a></li>
-            <li><a href="https://www.json.org/json-ja.html" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">JSON公式サイト</a></li>
-            <li><a href="https://and-engineer.com/articles/YV5IhREAACMA7NZJ" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">アンドエンジニア「JSON入門！」</a></li>
-            <li><a href="https://products.sint.co.jp/siob/blog/json" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">システムインテグレータ「JSONとは？」</a></li>
             <li><a href="https://api.jquery.com/category/ajax/" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">jQuery公式ドキュメント「Ajax」</a></li>
           </ol>
         </section>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-          <p className="text-gray-600"> 2025 JSON入門講座</p>
-        </div>
       </div>
     </div>
   );

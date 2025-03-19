@@ -4,14 +4,13 @@
 1. JSONとは何か
 2. JSONの基本構造
 3. JSONの書き方
-4. HTMLとJavaScriptでJSONを扱う方法
-5. JSON文字列とJavaScriptオブジェクトの変換
-6. 実践例：JSONデータの表示
-7. 実践例：APIからJSONデータを取得する
-8. 実習課題
-9. よくあるエラーと解決方法
-10. 応用編：jQueryでJSONを扱う
-11. 参考リソース
+4. JSON文字列とJavaScriptオブジェクトの変換
+5. 実践例：JSONデータの表示
+6. 実践例：APIからJSONデータを取得する
+7. 実習課題
+8. よくあるエラーと解決方法
+9. 応用編：jQueryでJSONを扱う
+10. 参考リソース
 
 ---
 
@@ -67,31 +66,7 @@ JSONには2つの基本構造があります：
 
 ---
 
-## 4. HTMLとJavaScriptでJSONを扱う方法
-
-### 基本的なHTMLファイルの構造
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>JSON入門</title>
-</head>
-<body>
-  <h1>JSONを扱う例</h1>
-  <div id="output"></div>
-  
-  <script>
-    // ここにJavaScriptコードを書きます
-  </script>
-</body>
-</html>
-```
-
----
-
-## 5. JSON文字列とJavaScriptオブジェクトの変換
+## 4. JSON文字列とJavaScriptオブジェクトの変換
 
 ### JSON文字列 → JavaScriptオブジェクト（パース）
 
@@ -124,7 +99,7 @@ console.log(jsonString);
 
 ---
 
-## 6. 実践例：JSONデータの表示
+## 5. 実践例：JSONデータの表示
 
 ```html
 <!DOCTYPE html>
@@ -174,7 +149,7 @@ console.log(jsonString);
 
 ---
 
-## 7. 実践例：APIからJSONデータを取得する
+## 6. 実践例：APIからJSONデータを取得する
 
 ```javascript
 // Fetch APIを使ってデータを取得
@@ -201,7 +176,7 @@ function displayData(data) {
 
 ---
 
-## 8. 実習課題
+## 7. 実習課題
 
 ### 課題1: 簡単なJSONオブジェクトの作成と表示
 自分の情報（名前、年齢、趣味など）をJSONで作成し、HTML上に表示してみましょう。
@@ -215,7 +190,7 @@ JSONファイルを作成し、fetch APIを使って読み込んでみましょ�
 
 ---
 
-## 9. よくあるエラーと解決方法
+## 8. よくあるエラーと解決方法
 
 ### JSONの構文エラー
 - カンマの付け忘れや余分なカンマ
@@ -229,7 +204,7 @@ JSONファイルを作成し、fetch APIを使って読み込んでみましょ�
 
 ---
 
-## 10. 応用編：jQueryでJSONを扱う
+## 9. 応用編：jQueryでJSONを扱う
 
 ### 例1: jQueryでJSONファイルを読み込んで表示する
 
@@ -258,6 +233,9 @@ $(document).ready(function() {
   });
 });
 ```
+
+**解説:**
+このコードは、jQueryを使用してJSONファイルを非同期で読み込む例です。`$.ajax()`メソッドを使用して、指定されたURLからJSONデータを取得します。成功時には`success`コールバック関数が実行され、取得したデータを使ってHTMLリストを生成します。エラーが発生した場合は`error`コールバック関数が実行され、エラーメッセージを表示します。`$.each()`メソッドはJSONデータの配列を反復処理するのに便利な方法です。
 
 ### 例2: jQueryでフォーム送信時にJSONデータを処理する
 
@@ -296,13 +274,13 @@ $(document).ready(function() {
 });
 ```
 
+**解説:**
+この例では、フォーム送信時にデータをJSONに変換して処理する方法を示しています。ユーザーがフォームを送信すると、`event.preventDefault()`でデフォルトの送信動作を停止し、フォームの各フィールドの値を取得してJavaScriptオブジェクトに変換します。`JSON.stringify()`メソッドを使用してこのオブジェクトをJSON文字列に変換し、整形して表示します（第2引数の`null`は置換関数なし、第3引数の`2`はインデントのスペース数）。最後に、このJSONデータをAjaxリクエストでサーバーに送信する例を示しています。`contentType`を`application/json`に設定することで、サーバーにJSONデータを送信していることを伝えます。
+
 ---
 
-## 11. 参考リソース
+## 10. 参考リソース
 
 1. [MDN Web Docs「JSON の操作」](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/JSON)
 2. [現代の JavaScript チュートリアル](https://ja.javascript.info/)
-3. [JSON公式サイト](https://www.json.org/json-ja.html)
-4. [アンドエンジニア「JSON入門！」](https://and-engineer.com/articles/YV5IhREAACMA7NZJ)
-5. [システムインテグレータ「JSONとは？」](https://products.sint.co.jp/siob/blog/json)
 6. [jQuery公式ドキュメント「Ajax」](https://api.jquery.com/category/ajax/)
