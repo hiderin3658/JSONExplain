@@ -1,6 +1,26 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  const openContactModal = () => {
+    setIsContactModalOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactModalOpen(false);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // お問い合わせ送信処理（実際の動作は不要）
+    alert("お問い合わせを送信しました（デモ）");
+    closeContactModal();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -359,6 +379,113 @@ $(document).ready(function() {
             <li><a href="https://api.jquery.com/category/ajax/" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">jQuery公式ドキュメント「Ajax」</a></li>
           </ol>
         </section>
+
+        {/* お問い合わせセクション */}
+        <section className="mb-12 bg-white rounded-xl shadow-lg p-8 text-center">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 border-b pb-2">お問い合わせ</h2>
+          <p className="mb-6 text-gray-700">
+            このJSONチュートリアルについて質問やご意見がございましたら、お気軽にお問い合わせください。
+          </p>
+          <button 
+            onClick={openContactModal}
+            className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all transform hover:-translate-y-1 hover:shadow-md font-medium"
+          >
+            お問い合わせ
+          </button>
+        </section>
+
+        {/* お問い合わせモーダル */}
+        {isContactModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-2xl font-semibold text-indigo-700">お問い合わせ</h3>
+                  <button 
+                    onClick={closeContactModal}
+                    className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                  >
+                    ×
+                  </button>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      お名前 <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="山田太郎"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      メールアドレス <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="example@email.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                      件名 <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="subject" 
+                      name="subject" 
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="JSONチュートリアルについて"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      お問い合わせ内容 <span className="text-red-500">*</span>
+                    </label>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      rows={4}
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
+                      placeholder="お問い合わせ内容をご記入ください..."
+                    />
+                  </div>
+                  
+                  <div className="flex gap-3 pt-4">
+                    <button 
+                      type="button" 
+                      onClick={closeContactModal}
+                      className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+                    >
+                      キャンセル
+                    </button>
+                    <button 
+                      type="submit"
+                      className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md hover:from-blue-700 hover:to-indigo-700 transition-all"
+                    >
+                      送信
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
